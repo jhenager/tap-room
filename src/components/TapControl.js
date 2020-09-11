@@ -26,6 +26,12 @@ class TapControl extends React.Component {
     });
   }
 
+  // handleDecreasingPintCount = () => {
+  //   this.setState({
+  //     count: count-1
+  //   });
+  // }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -34,8 +40,8 @@ class TapControl extends React.Component {
       currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
       buttonText = "Return to Tap List";
     } else {
-      currentlyVisibleState = <TapList tapList={this.state.masterTapList}/>;
-      buttonText = "Add Tap;"
+      currentlyVisibleState = <TapList tapList={this.state.masterTapList} tapDecrement={this.handleDecreasingPintCount}/>;
+      buttonText = "Add Tap"
     }
     return (
       <React.Fragment>

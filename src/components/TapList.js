@@ -4,10 +4,13 @@ import PropTypes from "prop-types";
 
 function TapList(props){
   return (
+
     <React.Fragment>
       <hr />
       {props.tapList.map((tap, index) =>
-        <Tap brewery={tap.brewery}
+        <Tap 
+          minusClick = {props.tapDecrement}
+          brewery={tap.brewery}
           beer={tap.beer}
           style={tap.style}
           price={tap.price}
@@ -21,7 +24,8 @@ function TapList(props){
 }
 
 TapList.propTypes = {
-  tapList: PropTypes.array
+  tapList: PropTypes.array,
+  minusClick: PropTypes.func
 };
 
 export default TapList;

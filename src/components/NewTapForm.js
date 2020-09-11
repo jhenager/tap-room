@@ -32,13 +32,14 @@ function NewTapForm(props){
           name="style"
           placeholder="Style of Beer" />
         <input
-          type="number"
+          type="text"
           name="price"
           placeholder="Price $" />
         <input
-          type="number"
+          type="text"
           name="abv"
           placeholder="ABV %" />
+          <button type="submit">Add Tap</button>
       </form>
     </React.Fragment>
   );
