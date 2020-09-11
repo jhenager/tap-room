@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Tap(props){
   return(
     <React.Fragment>
-      <h3>{props.brewery} - {props.beer}</h3>
+      <h3>{props.brewery} - {props.beer}: {props.count}</h3>
       <p>{props.style}</p>
       <p>{props.price}</p>
       <p>{props.abv}</p>
@@ -17,7 +17,8 @@ Tap.propTypes = {
   beer = PropTypes.string,
   style = PropTypes.string,
   price = PropTypes.string,
-  abv = PropTypes.string
+  abv = PropTypes.string,
+  count = PropTypes.number
 };
 
 export default Tap;

@@ -12,6 +12,7 @@ function TapList(props){
           style={tap.style}
           price={tap.price}
           abv={tap.abv}
+          count={tap.count}
           key={index}/>
         )}
     </React.Fragment>
