@@ -1,5 +1,6 @@
 import React from 'react';
-import TicketList from './TapList';
+import TapList from './TapList';
+import NewTapForm from './NewTapForm';
 
 class TapControl extends React.Component {
 
@@ -30,7 +31,7 @@ class TapControl extends React.Component {
     let buttonText = null;
     
     if(this.state.formVisibleOnPage) {
-      currentlyVisibleState = <newTapForm onNewTapCreation={this.handleAddingNewTapToList} />
+      currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
       buttonText = "Return to Tap List";
     } else {
       currentlyVisibleState = <TapList tapList={this.state.masterTapList}/>;
@@ -44,3 +45,5 @@ class TapControl extends React.Component {
     );
   }
 }
+
+export default TapControl;

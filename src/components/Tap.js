@@ -13,12 +13,13 @@ function Tap(props){
 }
 
 Tap.propTypes = {
-  brewery = PropTypes.string,
-  beer = PropTypes.string,
-  style = PropTypes.string,
-  price = PropTypes.string,
-  abv = PropTypes.string,
-  count = PropTypes.number
+  brewery: PropTypes.string,
+  beer: PropTypes.string,
+  style: PropTypes.string,
+  price: PropTypes.number,
+  abv: PropTypes.number,
+  count: PropTypes.number,
+  id: PropTypes.string,
 };
 
 export default Tap;

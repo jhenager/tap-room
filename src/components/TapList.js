@@ -13,13 +13,14 @@ function TapList(props){
           price={tap.price}
           abv={tap.abv}
           count={tap.count}
+          id={tap.id}
           key={index}/>
         )}
     </React.Fragment>
   );
 }
 
-TapList.proptypes = {
+TapList.propTypes = {
   tapList: PropTypes.array
 };
 
