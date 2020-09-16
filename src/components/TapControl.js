@@ -8,15 +8,30 @@ class TapControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterTapList: []
+      masterTapList: [],
+      selectedPost: null, 
+      editing: false
     };
   }
 
   handleClick = () => {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+    if (this.state.selectedPost != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedPost: null,
+        editing: false,
+      });
+    } else {
+      this.setState((prevState) => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+      }));
+    }
+  };
+
+  handleEditClick = () => {
+    this.setState({editing: true});
   }
+
 
   handleAddingNewTapToList = (newTap) => {
     const newMasterTapList = this.state.masterTapList.concat(newTap);
@@ -26,11 +41,13 @@ class TapControl extends React.Component {
     });
   }
 
-  // handleDecreasingPintCount = () => {
-  //   this.setState({
-  //     count: count-1
-  //   });
-  // }
+  handleDecreasingPintCount = (id) => {
+    const selectedPost = this.state.masterPostList.filter(
+      (post) => post.id === id
+    )[0];
+    
+    this.setState({ selectedPost: selectedPost });
+  };
 
   render(){
     let currentlyVisibleState = null;
