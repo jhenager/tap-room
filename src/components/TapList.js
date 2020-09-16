@@ -9,6 +9,7 @@ function TapList(props){
       <hr />
       {props.tapList.map((tap, index) =>
         <Tap 
+          whenTapClicked = { props.onTapSelection }
           minusClick = {props.tapDecrement}
           brewery={tap.brewery}
           beer={tap.beer}
@@ -25,7 +26,8 @@ function TapList(props){
 
 TapList.propTypes = {
   tapList: PropTypes.array,
-  minusClick: PropTypes.func
+  minusClick: PropTypes.func,
+  onTapSelection: PropTypes.func
 };
 
 export default TapList;
