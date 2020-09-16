@@ -12,7 +12,7 @@ function TapEdit(props) {
       price: event.target.price.value,
       abv: event.target.abv.value,
       count: event.target.count.value,
-      id: Tap.id,
+      id: tap.id,
     });
   }
 

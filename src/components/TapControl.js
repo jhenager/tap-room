@@ -65,11 +65,11 @@ class TapControl extends React.Component {
   };
 
   handleChangingSelectedTap = (id) => {
-    const selectedTap = this.state.masterPostList.filter(
-      (post) => post.id === id
+    const selectedTap = this.state.masterTapList.filter(
+      (tap) => tap.id === id
     )[0];
     
-    this.setState({ selectedPost: selectedPost });
+    this.setState({ selectedTap: selectedTap });
   };
 
   render(){
@@ -78,8 +78,8 @@ class TapControl extends React.Component {
     
     if (this.state.editing){
       currentlyVisibleState = <TapEdit tap={this.state.selectedTap} onEditTap={this.handleEditingTapInList} />
-      buttonText = "Return to Posts";
-    } else if (this.state.selectedPost != null){
+      buttonText = "Return to Taps";
+    } else if (this.state.selectedTap != null){
       currentlyVisibleState = <TapDetail tap={this.state.selectedTap} onClickingDelete={this.handleDeletingTap}
       onClickingEdit={this.handleEditClick} />
       buttonText = "Return to Taps";
