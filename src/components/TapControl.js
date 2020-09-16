@@ -52,16 +52,23 @@ class TapControl extends React.Component {
     });
   };
   
+  handleDeletingTap = (id) => {
+    const newMasterTapList = this.state.masterTapList.filter(
+      (tap) => tap.id !== id
+    );
+    this.setState({
+      masterTapList: newMasterTapList,
+      selectedTap: null,
+    });
+  };
 
-  
-
-  // handleDecreasingPintCount = (id) => {
-  //   const selectedTap = this.state.masterPostList.filter(
-  //     (post) => post.id === id
-  //   )[0];
+  handleChangingSelectedTap = (id) => {
+    const selectedTap = this.state.masterPostList.filter(
+      (post) => post.id === id
+    )[0];
     
-  //   this.setState({ selectedPost: selectedPost });
-  // };
+    this.setState({ selectedPost: selectedPost });
+  };
 
   render(){
     let currentlyVisibleState = null;
