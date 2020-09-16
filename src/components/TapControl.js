@@ -1,6 +1,8 @@
 import React from 'react';
 import TapList from './TapList';
 import NewTapForm from './NewTapForm';
+import TapEdit from "./TapEdit";
+import TapDetail from "./TapDetail";
 
 class TapControl extends React.Component {
 
