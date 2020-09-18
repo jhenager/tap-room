@@ -72,6 +72,20 @@ class TapControl extends React.Component {
     this.setState({ selectedTap: selectedTap });
   };
 
+  handleSellingBeer = (id) => {
+    const selectedTap = this.state.masterTapList.filter(
+      (tap) => tap.id === id
+    )[0];
+    if(selectedTap.count > 0){
+      const decrementedTap = Object.assign({}, selectedTap, {count: selectedTap.count - 1})
+      const editedMasterTapList = this.state.masterTapList
+        .filter(tap => tap.id !== id)
+        .concat(decrementedTap);
+      this.setState({
+        masterTapList: editedMasterTapList
+      })
+    }
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -87,7 +101,7 @@ class TapControl extends React.Component {
       currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
       buttonText = "Return to Tap List";
     } else {
-      currentlyVisibleState = <TapList tapList={this.state.masterTapList} onTapSelection={this.handleChangingSelectedTap}/>;
+      currentlyVisibleState = <TapList tapList={this.state.masterTapList} onTapSelection={this.handleChangingSelectedTap} tapDecrement={this.handleSellingBeer}/>;
       buttonText = "Add Tap"
     }
     return (

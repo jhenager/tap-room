@@ -8,7 +8,7 @@ function Tap(props){
         <h3>{props.brewery} - {props.beer}: {props.count} Pints Remaining</h3>
         <p>{props.style}</p>
         <button onClick={() => props.whenTapClicked(props.id)}>Beer Details</button>
-        {/* <button onClick={() => props.minusClick(props.id)}>Sell a beer</button> */}
+        <button onClick={() => props.minusClick(props.id)}>Sell a beer</button>
       
       
     </React.Fragment>
