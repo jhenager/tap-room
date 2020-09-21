@@ -1,4 +1,101 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**<h1 align = "center"> Tap Room**
+
+
+
+
+**<h2 align="center">Keep track of what's on tap!**
+
+
+**<h4 align = "center">
+  <a href="#requirements">Requirements</a> •
+  <a href="#diagram">Diagram</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#protecting-your-data">Protecting Data<a> •
+  <a href="#questions-and-concerns">Q's & C's</a> •
+  <a href="#technologies-used">Technologies</a> •
+  <a href="#bugs">Bugs</a> •  
+  <a href="#contributors">Contributors</a> •
+  <a href="#license">License</a>**
+
+<br>
+<h2 align = "center">
+</h1>
+
+**ABOUT**
+
+An application made with React that allows the user to create a list of taps, view the details, edit/delete each tap and also sell individual pints.
+
+
+## **REQUIREMENTS**
+
+* Install [Git v2.62.2+](https://git-scm.com/downloads/)
+* Install [Javascript](https://www.javascript.com/)
+* Install [Visual Studio Code](https://code.visualstudio.com/)
+* Install [React](https://reactjs.org/)
+
+ <br>
+
+## **DIAGRAM**
+
+![Diagram](./img/taplist.jpeg)
+
+
+
+## **SETUP**
+
+
+copy this url to clone this project to your local system:
+```html
+https://github.com/jhenager/tap-room.git
+```
+
+<br>
+
+Once copied, select "Clone Repository" from within VSCode & paste the copied link as shown in the image below.
+
+![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone-github2.gif "Cloning from Github within VSCode")
+
+
+<br>
+
+* _Run the application_
+  1. _In the terminal, navigate to the project directory by running the command `> cd the-tap`_
+  2. _Now that we are in the the-tap directory you will run the command `> npm install` followed by `> npm start`_
+  3. _Go to http://localhost:3000/ in your preferred browser to use the application_
+
+![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
+
+
+## **PROTECTING YOUR DATA**
+
+#### **Step 1: From within VSCode in the root project directory, we will create a .gitignore file**
+
+# For Mac Users
+```js 
+touch .gitignore 
+```
+
+# For Windows Users:
+
+```js 
+ni .gitignore 
+```
+
+#### Step 2: commit that .gitignore file (this prevents your sensitive information from being shown to others). **⚠️DO NOT PROCEED UNTIL YOU DO!⚠️**
+
+![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/entity-readme-image.png "Set up instructions")
+
+#### Step 3: **To commit your .gitignore file enter the following commands**
+
+```js
+git add .gitignore
+```
+```js
+git commit -m "protect data"
+```
+
+
+<br>
 
 ## Available Scripts
 
